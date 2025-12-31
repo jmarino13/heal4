@@ -480,7 +480,7 @@ input:focus, select:focus, textarea:focus{
     /* subtle brand tint */
     radial-gradient(80% 90% at 10% 20%, rgba(162, 76, 36, .35), transparent 60%),
     /* the image */
-    url("assets/hero.jpg") center/cover no-repeat;
+    url("assets/hero.jpeg") center/cover no-repeat;
   transform: scale(1.02);
   filter: saturate(1.05) contrast(1.05);
 }
