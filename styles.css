@@ -64,9 +64,7 @@ a{color:inherit; text-decoration:none}
     transparent
   );
   backdrop-filter: blur(6px);
-}
 
-}
 .header__inner{
   display:flex;
   align-items:center;
@@ -463,119 +461,7 @@ input:focus, select:focus, textarea:focus{
   .nav__links.is-open{display:flex}
   .form__row{grid-template-columns: 1fr}
 }
-/* ===== Oath-style hero (full-bleed background) ===== */
-.hero--bg{
-  position: relative;
-  min-height: calc(100svh - 72px); /* accounts for header */
-  display: grid;
-  align-items: center;
-  overflow: clip;
-  padding-top: 96px;
-  padding-bottom: 72px;
-}
-
-.hero--bg .hero__bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,0.88) 0%,
-      rgba(0,0,0,0.65) 30%,
-      rgba(0,0,0,0.35) 55%,
-      rgba(0,0,0,0.10) 75%,
-      rgba(0,0,0,0.00) 100%
-    ),
-    url("assets/hero.jpeg") right center / cover no-repeat;
-}.hero--bg .hero__bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at 75% 50%,
-      rgba(255,255,255,0.15),
-      rgba(0,0,0,0.25) 60%
-    );
-}
-
-
-}
-
-}
-
-.hero--bg .hero__wrap{
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 680px);
-  gap: 24px;
-}
-
-.hero--bg .hero__copy{
-  max-width: 680px;
-}
-
-/* big, clean headline like Oath */
-.hero--bg h1{
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin-top: 14px;
-  margin-bottom: 16px;
-}
-
-/* make lead text readable on photo */
-.hero--bg .lead{
-  max-width: 56ch;
-  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  color: rgba(239, 230, 219, .92);
-}
-
-/* make trust pills float nicely */
-.hero--bg .hero__trust{
-  margin-top: 18px;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,.28);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 14px 16px;
-  width: fit-content;
-}
-
-@media (max-width: 820px){
-  .hero--bg{
-    padding-top: 92px;
-    padding-bottom: 56px;
-  }
-  .hero--bg .hero__trust{
-    width: 100%;
-/* === Bulletproof Oath-style hero background === */
-.hero--bg{
-  position: relative;
-  min-height: calc(100svh - 72px);
-  display: grid;
-  align-items: center;
-  padding-top: 96px;
-  padding-bottom: 72px;
-
-  background:
-    linear-gradient(90deg,
-      rgba(0,0,0,.85) 0%,
-      rgba(0,0,0,.60) 35%,
-      rgba(0,0,0,.25) 60%,
-      rgba(0,0,0,.05) 78%,
-      rgba(0,0,0,.00) 100%
-    ),
-    url("assets/hero.jpeg");
-
-  background-size: cover, cover;
-  background-position: 0 0, 75% center; /* adjust 65–85% to taste */
-  background-repeat: no-repeat, no-repeat;
-}
-
-/* Ensure text stays crisp */
-.hero--bg .hero__wrap{ position: relative; z-index: 1; }
-/* === FINAL: Image-first hero with overlay (bulletproof) === */
+/* ===== Oath-style hero background (clean + working) ===== */
 .hero.hero--bg{
   position: relative;
   min-height: calc(100svh - 72px);
@@ -584,30 +470,27 @@ input:focus, select:focus, textarea:focus{
   padding-top: 96px;
   padding-bottom: 72px;
 
-  /* IMAGE ALWAYS SHOWS */
-  background-image: url("assets/hero.jpeg") !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: 75% center !important; /* adjust 60–85% to taste */
+  /* Image */
+  background: url("assets/hero.jpeg") 75% center / cover no-repeat;
 }
 
-/* Overlay sits ABOVE the image, BELOW the text */
+/* Overlay for readability */
 .hero.hero--bg::before{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(90deg,
-    rgba(0,0,0,.86) 0%,
-    rgba(0,0,0,.62) 35%,
-    rgba(0,0,0,.28) 60%,
-    rgba(0,0,0,.10) 78%,
+    rgba(0,0,0,.70) 0%,
+    rgba(0,0,0,.50) 35%,
+    rgba(0,0,0,.22) 60%,
+    rgba(0,0,0,.06) 78%,
     rgba(0,0,0,.00) 100%
   );
   pointer-events:none;
   z-index:0;
 }
 
-/* Ensure text stays on top */
+/* Keep content on top */
 .hero.hero--bg .container,
 .hero.hero--bg .hero__wrap{
   position: relative;
