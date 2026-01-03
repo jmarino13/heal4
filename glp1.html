@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLP-1 Program | HEAL Wellness</title>
+  <meta name="description" content="GLP-1 at HEAL Wellness: eligibility screening, clinician review, and follow-up support where appropriate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#top" aria-label="HEAL Wellness home">
+        <img class="brand__logo" src="assets/logo.png" alt="HEAL Wellness logo" />
+        <span class="brand__name">HEAL Wellness</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__links" style="display:flex">
+          <li><a href="index.html#offerings">Offerings</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a class="btn btn--sm" href="index.html#get-started">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:64px">
+      <div class="container">
+        <p class="pill">GLP-1 Program</p>
+        <h1 style="max-width:16ch; margin-top:12px;">Simple screening. Clear next steps.</h1>
+        <p class="lead" style="max-width:56ch;">
+          A streamlined pathway built around eligibility screening, education, and clinician review where appropriate.
+        </p>
+
+        <ol class="steps" style="margin-top:18px">
+          <li class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Complete intake</h3>
+              <p>Share goals and key health information for screening.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>Review</h3>
+              <p>Clinician review where applicable, based on jurisdiction and availability.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Support</h3>
+              <p>Clear guidance and follow-up expectations.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="cta" style="margin-top:22px">
+          <div class="cta__copy">
+            <h2>Start screening</h2>
+            <p>We’ll route you to the right next step.</p>
+          </div>
+          <div>
+            <a class="btn btn--full" href="index.html#get-started">Get started</a>
+            <p class="micro muted" style="margin-top:10px">
+              *Educational content only. No guarantees. Programs vary by state and clinician availability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img class="brand__logo" src="assets/logo.png" alt="" />
+          <div>
+            <div class="footer__name">HEAL Wellness</div>
+            <div class="footer__tag">It’s not a brand, it’s a lifestyle.</div>
+          </div>
+        </div>
+        <p class="micro muted">© <span id="year"></span> HEAL Wellness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
