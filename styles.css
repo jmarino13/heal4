@@ -64,7 +64,7 @@ a{color:inherit; text-decoration:none}
     transparent
   );
   backdrop-filter: blur(6px);
-
+}
 .header__inner{
   display:flex;
   align-items:center;
