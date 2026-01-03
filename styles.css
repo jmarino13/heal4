@@ -471,18 +471,20 @@ input:focus, select:focus, textarea:focus{
   padding-bottom: 72px;
 }
 
-.hero--bg .hero__bg{
+.hero--bg .hero__bg {
   position: absolute;
   inset: 0;
   background:
-    /* top fade for header readability */
-    linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.15) 40%, rgba(0,0,0,.65)),
-    /* subtle brand tint */
-    radial-gradient(80% 90% at 10% 20%, rgba(162, 76, 36, .35), transparent 60%),
-    /* the image */
-    url("assets/hero.jpeg") center/cover no-repeat;
-  transform: scale(1.02);
-  filter: saturate(1.05) contrast(1.05);
+    linear-gradient(
+      90deg,
+      rgba(10,10,10,0.92) 0%,
+      rgba(10,10,10,0.75) 35%,
+      rgba(10,10,10,0.35) 60%,
+      rgba(10,10,10,0.05) 100%
+    ),
+    url("assets/hero.jpg") center right / cover no-repeat;
+}
+
 }
 
 .hero--bg .hero__wrap{
