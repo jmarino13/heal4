@@ -549,5 +549,27 @@ input:focus, select:focus, textarea:focus{
   }
   .hero--bg .hero__trust{
     width: 100%;
-  }
+  }/* FORCE hero image visible (override any conflicting styles) */
+.hero.hero--bg { position: relative; }
+.hero.hero--bg .hero__bg{
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg,
+      rgba(0,0,0,.85) 0%,
+      rgba(0,0,0,.60) 35%,
+      rgba(0,0,0,.25) 60%,
+      rgba(0,0,0,.00) 100%
+    ),
+    url("assets/hero.jpg");
+  background-size: cover, cover;
+  background-position: 0 0, 78% center; /* image pushed to the right */
+  background-repeat: no-repeat, no-repeat;
+  opacity: 1 !important;
+  filter: none !important;
+  z-index: 0;
+}
+
+.hero.hero--bg .container { position: relative; z-index: 2; }
+
 }
