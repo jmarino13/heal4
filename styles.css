@@ -166,4 +166,39 @@ a{color:inherit;text-decoration:none}
   background: rgba(0,0,0,.35);
   border: 1px solid rgba(255,255,255,.14);
 }
+/* Team (minimal) */
+.team{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+.team__card{
+  display:flex;
+  gap: 14px;
+  align-items:center;
+  background: rgba(20,20,26,.70);
+  border: 1px solid rgba(244,244,246,.10);
+  border-radius: var(--radius2);
+  padding: 14px;
+}
+.team__photo{
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 1px solid rgba(244,244,246,.12);
+}
+.team__name{
+  font-weight: 750;
+  letter-spacing: -.2px;
+}
+.team__title{
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-top: 2px;
+}
+@media (max-width: 760px){
+  .team{grid-template-columns: 1fr;}
+  .team__photo{width:72px;height:72px;}
+}
 
