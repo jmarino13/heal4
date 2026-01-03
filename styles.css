@@ -566,7 +566,7 @@ input:focus, select:focus, textarea:focus{
       rgba(0,0,0,.05) 78%,
       rgba(0,0,0,.00) 100%
     ),
-    url("assets/hero.jpg");
+    url("assets/hero.jpeg");
 
   background-size: cover, cover;
   background-position: 0 0, 75% center; /* adjust 65–85% to taste */
@@ -575,3 +575,41 @@ input:focus, select:focus, textarea:focus{
 
 /* Ensure text stays crisp */
 .hero--bg .hero__wrap{ position: relative; z-index: 1; }
+/* === FINAL: Image-first hero with overlay (bulletproof) === */
+.hero.hero--bg{
+  position: relative;
+  min-height: calc(100svh - 72px);
+  display: grid;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 72px;
+
+  /* IMAGE ALWAYS SHOWS */
+  background-image: url("assets/hero.jpeg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 75% center !important; /* adjust 60–85% to taste */
+}
+
+/* Overlay sits ABOVE the image, BELOW the text */
+.hero.hero--bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,.86) 0%,
+    rgba(0,0,0,.62) 35%,
+    rgba(0,0,0,.28) 60%,
+    rgba(0,0,0,.10) 78%,
+    rgba(0,0,0,.00) 100%
+  );
+  pointer-events:none;
+  z-index:0;
+}
+
+/* Ensure text stays on top */
+.hero.hero--bg .container,
+.hero.hero--bg .hero__wrap{
+  position: relative;
+  z-index: 1;
+}
