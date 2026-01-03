@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medicinal Face Creams | HEAL Wellness</title>
+  <meta name="description" content="HEAL Wellness topical face creams: cosmetic-first, education-led, with a simple questionnaire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#top" aria-label="HEAL Wellness home">
+        <img class="brand__logo" src="assets/logo.png" alt="HEAL Wellness logo" />
+        <span class="brand__name">HEAL Wellness</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__links" style="display:flex">
+          <li><a href="index.html#offerings">Offerings</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a class="btn btn--sm" href="index.html#get-started">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:64px">
+      <div class="container">
+        <p class="pill">Medicinal Face Creams</p>
+        <h1 style="max-width:16ch; margin-top:12px;">Cosmetic-first. Clean and simple.</h1>
+        <p class="lead" style="max-width:58ch;">
+          Topical options paired with clear education and a short questionnaire to help screen for adverse effects.
+        </p>
+
+        <div class="cards cards--minimal" style="margin-top:22px">
+          <article class="card">
+            <h3>Cosmetic labeling approach</h3>
+            <p>We keep language clean: education-first, no outcome promises.</p>
+          </article>
+          <article class="card">
+            <h3>Questionnaire</h3>
+            <p>A short intake helps identify contraindications and next steps.</p>
+          </article>
+          <article class="card">
+            <h3>Support</h3>
+            <p>Clear instructions and follow-up expectations.</p>
+          </article>
+        </div>
+
+        <div class="cta" style="margin-top:22px">
+          <div class="cta__copy">
+            <h2>Complete questionnaire</h2>
+            <p>Start your intake in under 2 minutes.</p>
+          </div>
+          <div>
+            <a class="btn btn--full" href="index.html#get-started">Get started</a>
+            <p class="micro muted" style="margin-top:10px">
+              *Educational content only. No guarantees. Availability varies by state and clinician access.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img class="brand__logo" src="assets/logo.png" alt="" />
+          <div>
+            <div class="footer__name">HEAL Wellness</div>
+            <div class="footer__tag">It’s not a brand, it’s a lifestyle.</div>
+          </div>
+        </div>
+        <p class="micro muted">© <span id="year"></span> HEAL Wellness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
