@@ -486,7 +486,7 @@ input:focus, select:focus, textarea:focus{
       rgba(0,0,0,0.10) 75%,
       rgba(0,0,0,0.00) 100%
     ),
-    url("assets/hero.jpg") right center / cover no-repeat;
+    url("assets/hero.jpeg") right center / cover no-repeat;
 }.hero--bg .hero__bg::after {
   content: "";
   position: absolute;
@@ -561,7 +561,7 @@ input:focus, select:focus, textarea:focus{
       rgba(0,0,0,.25) 60%,
       rgba(0,0,0,.00) 100%
     ),
-    url("assets/hero.jpg");
+    url("assets/hero.jpeg");
   background-size: cover, cover;
   background-position: 0 0, 78% center; /* image pushed to the right */
   background-repeat: no-repeat, no-repeat;
