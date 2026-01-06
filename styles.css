@@ -74,19 +74,27 @@ a{color:inherit;text-decoration:none}
   display:grid;
   align-items:center;
   padding:96px 0 72px;
-  background:url("assets/hero.jpeg") 80% center / cover no-repeat;
+  background:url("assets/hero.jpeg") 90% center / cover no-repeat;
 }
 .hero.hero--bg::before{
   content:""; position:absolute; inset:0;
   background:linear-gradient(90deg,
-    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.55) 0%,
     rgba(0,0,0,.50) 35%,
     rgba(0,0,0,.22) 60%,
     rgba(0,0,0,.06) 78%,
     rgba(0,0,0,0) 100%);
   pointer-events:none;
 }
-.hero__wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,680px);gap:24px}
+.hero__wrap{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  max-width: 520px;     /* 👈 THIS is the key */
+  margin-left: 0;      /* lock left */
+  gap: 24px;
+}
+
 .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;
   border:1px solid rgba(244,244,246,.14);background:rgba(20,20,26,.66);
   color:rgba(239,230,219,.92);font-size:13px;margin:0 0 12px}
