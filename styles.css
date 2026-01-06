@@ -212,4 +212,27 @@ a{color:inherit;text-decoration:none}
   .team{grid-template-columns: 1fr;}
   .team__photo{width:72px;height:72px;}
 }
+/* Mobile: move hero text up so it doesn’t cover the subject */
+@media (max-width: 820px){
+  .hero.hero--bg{
+    align-items: start;              /* stop vertical centering */
+    padding-top: 72px;              /* less top padding */
+    padding-bottom: 40px;
+    background-position: 20% 20%;   /* lift the photo framing a bit */
+  }
+
+  .hero__wrap{
+    margin-top: -18px;              /* pull text upward */
+    max-width: 92vw;
+  }
+
+  /* Optional: shrink headline slightly on mobile */
+  .hero h1{
+    font-size: clamp(34px, 9vw, 44px);
+    line-height: 1.02;
+  }
+
+  /* Optional: tighten spacing */
+  .hero__cta{ margin-top: 10px; }
+}
 
