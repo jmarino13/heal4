@@ -90,7 +90,7 @@ a{color:inherit;text-decoration:none}
   position: relative;
   z-index: 1;
   display: grid;
-  justify-content: end;        /* 👈 pushes content right */
+  justify-items: end;        /* 👈 pushes content right */
   max-width: 520px;
   margin-left: auto;          /* 👈 critical */
   margin-right: 0;
