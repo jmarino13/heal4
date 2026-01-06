@@ -74,7 +74,7 @@ a{color:inherit;text-decoration:none}
   display:grid;
   align-items:center;
   padding:96px 0 72px;
-  background:url("assets/hero.jpeg") 90% center / cover no-repeat;
+  background:url("assets/hero.jpeg") 20% center / cover no-repeat;
 }
 .hero.hero--bg::before{
   content:""; position:absolute; inset:0;
